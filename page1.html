@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Application Form</title>
+</head>
+<body>
+<form>
+<fieldset>
+Name:
+<input type="text" name="uname" id="username"><br>
+<br>PleaseSelectYourGender:<br>
+<br><input type="radio" id="gender" name="gender" value="male"/>Male
+<input type="radio" id="gender" name="gender" value="female"/>Female
+<input type="radio" id="gender" name="gender" value="others"/>others<br>
+<br>MobileNumber:
+<input type="text" name="mnumber" id="mob"><br>
+<br>EmailId:
+<input type="email" name="ename" id="emailname"><br>
+<br>City:
+<input type="text" name="cname" id="cityname"><br>
+<br>State:
+<input type="text" name="sname" id="statename"><br>
+<br>Country
+<select name="country" id="countryname" style="width:160px">
+<option value="india">india</option>
+<option value="pakistan">pakistan</option>
+<option value="africa">africa</option>
+<option value="china">china</option>
+<option value="other">other</option>
+</select><br>
+<br><input type="button" value="Submit" onclick="myFunction()">
+</fieldset>
+</form>
+<script type="text/javascript">
+function myFunction() {
+var a=document.getElementById("username").value;
+var b=document.getElementById("gender").value;
+var c=document.getElementById("mob").value;
+var d=document.getElementById("emailname").value;
+var e=document.getElementById("cityname").value;
+var f=document.getElementById("statename").value;
+var g=document.getElementById("countryname").value;
+window.document.location='./followingpage.html'+'?'+'Name='+a+'&'+'PleaseSelectYourGender='+b+'&'+'MobileNumber='+c+'&'+'EmailId='+d+'&'+
+'City='+e+'&'+'State='+f+'&'+'Country='+g;
+}
+</script>
+</body>
+</html>
